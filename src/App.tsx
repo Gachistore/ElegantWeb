@@ -1,7 +1,9 @@
+import Browser from "./router/Browser"
+
 function App() {
   return (
     <>
-      <h1>Hello, world!</h1>
+      <Browser/>
     </>
   )
 }

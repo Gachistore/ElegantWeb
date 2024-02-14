@@ -1,1 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url("assets/styles/reset.css");
+@import url("assets/styles/auth_form.css");
+
+:root {
+    --blue-color: #377dff;
+	--green-color: #38cb89;
+	--yellow-color: #ffab00;
+	--red-color: #ff5630;
+	--brand-color: #000;
+    --white-color: #FCFCFD;
+    --white-dark-color: #F3F5F7;
+    --gray-color: #6C7275;
+    --gray-light-color: #E8ECEF;   
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}

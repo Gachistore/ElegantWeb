@@ -1,0 +1,19 @@
+.button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.75;
+    background-color: var(--brand-color);
+    color: var(--white-color);
+    border: 1px solid var(--brand-color);
+    border-radius: 8px;
+    padding: 6px 40px;
+    cursor: pointer;
+    outline: none;
+    transition: all .3s;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--white-color);
+    color: var(--brand-color);
+}
