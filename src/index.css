@@ -21,6 +21,10 @@
     --third-family: "Space Grotesk", sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--font-family);
     overflow-x: hidden;
@@ -33,4 +37,8 @@ a {
 .content {
     margin-inline: auto;
     max-width: 1152px;
+}
+
+section {
+    padding: 32px;
 }

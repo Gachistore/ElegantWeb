@@ -1,0 +1,108 @@
+.carousel__img {
+    max-height: 536px;
+    width: 100%;
+    height: 100% !important;
+    aspect-ratio: 1 / 1;
+    user-select: none;
+}
+
+.carousel__dot {
+    border: none;
+    background-color: var(--gray-light-color);
+    height: 8px;
+    width: 8px;
+    margin-inline: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.carousel__dot_selected {
+    width: 30px;
+    background-color: var(--white-color);
+}
+
+.carousel__arrow-container {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    display: none;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel__arrow-container .carousel__arrow {
+    width: 32px;
+    user-select: none;
+}
+
+.carousel__arrow-container:not(.carousel__arrow-container_active) > .carousel__arrow {
+    filter: invert(46%) sepia(9%) saturate(225%) hue-rotate(156deg) brightness(94%) contrast(94%);
+}
+
+.hero__bottom {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.hero__heading {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.1;
+    color: var(--gray-dark-color);
+}
+
+.hero__heading > span {
+    color: var(--gray-color);
+}
+
+.hero__description {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.57143;
+    color: var(--gray-color);
+}
+
+.hero__description > span {
+    color: var(--gray-dark-color);
+}
+
+@media screen and (min-width: 768px) {
+    .carousel__arrow-container {
+       display: flex;
+    }
+
+    .carousel__arrow-container_left {
+        left: 32px;
+    }
+
+    .carousel__arrow-container_right {
+        right: 32px;
+    }
+
+    .hero__bottom {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero__heading {
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 1.05556;
+    }
+
+    .hero__description {
+        max-width: 453px;
+    }
+}
