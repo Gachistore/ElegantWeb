@@ -8,6 +8,7 @@
 
 .header {
     padding: 16px 32px;
+    width: 100%;
 }
 
 .header__left {
