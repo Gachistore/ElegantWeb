@@ -33,11 +33,11 @@ body {
 
 .content {
     margin-inline: auto;
-    max-width: 1152px;
+    max-width: 1200px;
+    padding-inline: 32px;
 }
 
 section {
-    padding-inline: 32px;
     padding-bottom: 32px;
 }
 
