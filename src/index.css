@@ -23,15 +23,12 @@
 
 * {
     box-sizing: border-box;
+    color: var(--gray-dark-color);
 }
 
 body {
     font-family: var(--font-family);
     overflow-x: hidden;
-}
-
-a {
-    color: var(--brand-color);
 }
 
 .content {
@@ -40,5 +37,14 @@ a {
 }
 
 section {
-    padding: 32px;
+    padding-inline: 32px;
+    padding-bottom: 24px;
+}
+
+.arrow-link {
+    border-bottom: 1px solid var(--gray-dark-color);
+    padding-bottom: 2px;
+    padding-right: 18px;
+    background: url('assets/icons/arrow_right.svg') center right no-repeat;
+    background-size: 16px 16px;
 }

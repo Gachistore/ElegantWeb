@@ -8,6 +8,7 @@ import styles from './Header.module.css';
 const Header = () => {
     const [isNavShow, setIsNavShow] = useState(false);
 
+    // TODO: make left to right animation for nav menu
     return (
         <header className={[styles['header'], 'content'].join(' ')}>
             {

@@ -2,8 +2,8 @@ import { Carousel } from 'react-responsive-carousel';
 import Hero1 from 'src/assets/images/hero1.png';
 import Hero2 from 'src/assets/images/hero2.jpg';
 import Hero3 from 'src/assets/images/hero3.jpg';
-import ArrowLeft from 'src/assets/images/arrow_left.svg';
-import ArrowRight from 'src/assets/images/arrow_right.svg';
+import ArrowLeft from 'src/assets/icons/arrow_left.svg';
+import ArrowRight from 'src/assets/icons/arrow_right.svg';
 import styles from './HeroSection.module.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
