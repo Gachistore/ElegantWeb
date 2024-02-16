@@ -104,5 +104,6 @@
 
     .hero__description {
         max-width: 453px;
+        font-size: 16px;
     }
 }
