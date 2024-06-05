@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import MenuIcon from 'src/assets/icons/menu.svg';
 import CrossIcon from 'src/assets/icons/cross.svg';
 import CartIcon from 'src/assets/icons/cart.svg';
@@ -8,7 +8,8 @@ import styles from './Header.module.css';
 const Header = () => {
     const [isNavShow, setIsNavShow] = useState(false);
 
-    // TODO: make left to right animation for nav menu
+    const navigate = useNavigate();
+
     return (
         <header className={[styles['header'], 'content'].join(' ')}>
             {
@@ -47,7 +48,7 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
-            <div className={styles['header__right']}>
+            <div className={styles['header__right']} onClick={() => navigate('/auth/login')}>
                 <img src={CartIcon} />
             </div>
         </header>

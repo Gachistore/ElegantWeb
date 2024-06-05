@@ -9,14 +9,8 @@ type InputProps = {
     name?: string,
     value?: string,
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void,
-    [x: string]: any,
+    [x: string]: unknown,
 };
-
-export enum InputType {
-    text,
-    password,
-    email,
-}
 
 const Input = (props: InputProps) => {
     const [passType, setPassType] = useState("password");
@@ -25,7 +19,6 @@ const Input = (props: InputProps) => {
     const inputRef = useRef<HTMLInputElement>(null);
   
     const handlePassShow = () => {
-      console.log("clicked");
       if (passType === "password")
         setPassType("text");
       else
