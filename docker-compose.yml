@@ -14,7 +14,7 @@ services:
     volumes:
       - 3legant:/init.sql
     networks:
-      - 3legant
+      - server
 
   api:
     image: m1ll3r1337/3legant:latest
@@ -34,7 +34,8 @@ services:
       - db
     entrypoint: ["./main", "--seed"]
     networks:
-      - 3legant
+      - client
+      - server
 
   client:
     image: g0dd0r0/front:latest
@@ -42,11 +43,13 @@ services:
     ports:
       - "80:80"
     networks:
-      - 3legant
+      - client
 
 volumes:
   3legant:
 
 networks:
-  3legant:
+  client:
+    driver: bridge
+  server:
     driver: bridge
