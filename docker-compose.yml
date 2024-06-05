@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    container_name: postgres_db
+    environment:
+      POSTGRES_PASSWORD: postgres
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+      DB_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - 3legant:/init.sql
+
+  api:
+    image: m1ll3r1337/3legant:latest
+    container_name: elegant_api
+    ports:
+      - "3000:3000"
+    environment:
+      DB_URL: "postgresql://postgres:postgres@db:5432/postgres?sslmode=disable"
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+      DB_DB: postgres
+      DB_TABLE: postgres
+      DB_HOST: db
+      DB_PORT: "5432"
+
+    depends_on:
+      - db
+    entrypoint: ["./main", "--seed"]
+    networks:
+      - 3legant
+
+  client:
+    image: g0dd0r0/front:latest
+    container_name: elegant_front
+    ports:
+      - "80:80"
+    networks:
+      - 3legant
+
+volumes:
+  3legant:
+
+networks:
+  3legant:
+    driver: bridge
