@@ -13,6 +13,8 @@ services:
       - "5432:5432"
     volumes:
       - 3legant:/init.sql
+    networks:
+      - 3legant
 
   api:
     image: m1ll3r1337/3legant:latest
